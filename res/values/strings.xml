@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 CaoBill0522
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="jcao_title">Jcao features</string>
+    <string name="jcao_summary">System update and extras</string>
+    <string name="category_system">System</string>
+    <string name="system_update_title">System update</string>
+    <string name="system_update_summary">Current version: %1$s</string>
+</resources>

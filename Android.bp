@@ -1,0 +1,18 @@
+//
+// Copyright (C) 2026 CaoBill0522
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "JcaoParts",
+    defaults: ["SettingsLibDefaults"],
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    optimize: {
+        enabled: false,
+    },
+}
