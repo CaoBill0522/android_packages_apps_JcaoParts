@@ -12,6 +12,7 @@
 
         <Preference
             android:key="system_update"
+            android:icon="@drawable/ic_system_update"
             android:title="@string/system_update_title">
             <intent
                 android:action="android.intent.action.MAIN"
@@ -25,6 +26,7 @@
         android:title="@string/category_sim">
         <SwitchPreferenceCompat
             android:key="force_esim"
+            android:icon="@drawable/ic_esim"
             android:title="@string/force_esim_title"
             android:summary="@string/force_esim_summary" />
     </PreferenceCategory>
