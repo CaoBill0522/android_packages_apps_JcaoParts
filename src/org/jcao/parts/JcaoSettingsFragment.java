@@ -16,7 +16,6 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 public class JcaoSettingsFragment extends PreferenceFragmentCompat {
-    private static final String KEY_SYSTEM_UPDATE = "system_update";
     private static final String KEY_SIM_CATEGORY = "sim_category";
     private static final String KEY_FORCE_ESIM = "force_esim";
 
@@ -31,12 +30,6 @@ public class JcaoSettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.jcao_settings, rootKey);
-
-        Preference update = findPreference(KEY_SYSTEM_UPDATE);
-        if (update != null) {
-            update.setSummary(getString(R.string.system_update_summary,
-                    SystemProperties.get("ro.custom.version")));
-        }
 
         if (SKU_WITH_EUICC.equals(SystemProperties.get(PROP_SKU))) {
             Preference category = findPreference(KEY_SIM_CATEGORY);

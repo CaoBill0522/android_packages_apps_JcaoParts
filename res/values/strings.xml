@@ -8,7 +8,6 @@
     <string name="jcao_summary">System update and extras</string>
     <string name="category_system">System</string>
     <string name="system_update_title">System update</string>
-    <string name="system_update_summary">Current version: %1$s</string>
     <string name="category_sim">SIM</string>
     <string name="force_esim_title">Force enable eSIM</string>
     <string name="force_esim_summary">For China models with a rewritable removable eSIM card inserted</string>
