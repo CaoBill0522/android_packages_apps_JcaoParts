@@ -23,6 +23,34 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="performance_category"
+        android:title="@string/category_performance">
+
+        <Preference
+            android:key="refresh_rate"
+            android:icon="@drawable/ic_refresh_default"
+            android:title="@string/refresh_title"
+            android:summary="@string/refresh_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.jcao.parts"
+                android:targetClass="org.jcao.parts.refreshrate.RefreshActivity" />
+        </Preference>
+
+        <Preference
+            android:key="thermal_profiles"
+            android:icon="@drawable/ic_thermal_default"
+            android:title="@string/thermal_title"
+            android:summary="@string/thermal_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.jcao.parts"
+                android:targetClass="org.jcao.parts.thermal.ThermalActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="sound_category"
         android:title="@string/category_sound">
 
@@ -35,6 +63,49 @@
                 android:targetPackage="co.aospa.dolby"
                 android:targetClass="co.aospa.dolby.DolbyActivity" />
         </Preference>
+
+        <Preference
+            android:key="clear_speaker"
+            android:icon="@drawable/ic_clear_speaker"
+            android:title="@string/clear_speaker_title"
+            android:summary="@string/clear_speaker_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.jcao.parts"
+                android:targetClass="org.jcao.parts.speaker.ClearSpeakerActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="battery_category"
+        android:title="@string/category_battery">
+
+        <SwitchPreferenceCompat
+            android:key="charge_protect"
+            android:icon="@drawable/ic_charge_protect"
+            android:title="@string/charge_protect_title"
+            android:summary="@string/charge_protect_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            android:key="bypass_charging"
+            android:icon="@drawable/ic_bypass"
+            android:title="@string/bypass_title"
+            android:summary="@string/bypass_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="storage_category"
+        android:title="@string/category_storage">
+
+        <Preference
+            android:key="storage_health"
+            android:icon="@drawable/ic_storage_health"
+            android:title="@string/storage_health_title"
+            android:selectable="false" />
 
     </PreferenceCategory>
 

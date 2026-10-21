@@ -4,15 +4,23 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.jcao.parts">
+    package="org.jcao.parts"
+    android:sharedUserId="android.uid.system">
 
     <!-- Needed to start DitingEsim's switch activity -->
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
+    <!-- Persistent so the per-app refresh rate / thermal services and the
+         bypass power battery guard keep running. -->
     <application
+        android:name=".JcaoApplication"
         android:label="@string/jcao_title"
         android:icon="@drawable/ic_jcao"
         android:allowBackup="false"
+        android:persistent="true"
+        android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true"
         android:theme="@style/Theme.SubSettingsBase">
 
         <!-- Injected into Settings > System > Advanced, below Developer options -->
@@ -39,5 +47,37 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/jcao_summary" />
         </activity>
+
+        <receiver
+            android:name=".BootCompletedReceiver"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".refreshrate.RefreshActivity"
+            android:exported="false"
+            android:label="@string/refresh_title" />
+
+        <service
+            android:name=".refreshrate.RefreshService"
+            android:exported="false" />
+
+        <activity
+            android:name=".thermal.ThermalActivity"
+            android:exported="false"
+            android:label="@string/thermal_title" />
+
+        <service
+            android:name=".thermal.ThermalService"
+            android:exported="false" />
+
+        <activity
+            android:name=".speaker.ClearSpeakerActivity"
+            android:exported="false"
+            android:label="@string/clear_speaker_title" />
     </application>
 </manifest>

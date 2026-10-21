@@ -12,6 +12,10 @@ android_app {
     certificate: "platform",
     platform_apis: true,
     system_ext_specific: true,
+    static_libs: [
+        "androidx.preference_preference",
+        "androidx.recyclerview_recyclerview",
+    ],
     optimize: {
         enabled: false,
     },
