@@ -21,6 +21,23 @@
         </Preference>
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="sound_category"
+        android:title="@string/category_sound">
+
+        <Preference
+            android:key="dolby"
+            android:icon="@drawable/ic_dolby"
+            android:title="@string/dolby_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="co.aospa.dolby"
+                android:targetClass="co.aospa.dolby.DolbyActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="sim_category"
         android:title="@string/category_sim">
@@ -29,5 +46,21 @@
             android:icon="@drawable/ic_esim"
             android:title="@string/force_esim_title"
             android:summary="@string/force_esim_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="about_category"
+        android:title="@string/category_about">
+
+        <Preference
+            android:key="author_homepage"
+            android:icon="@drawable/ic_author"
+            android:title="@string/author_homepage_title"
+            android:summary="@string/author_homepage_summary">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.jcao.dev" />
+        </Preference>
+
     </PreferenceCategory>
 </PreferenceScreen>

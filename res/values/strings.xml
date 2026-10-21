@@ -11,4 +11,9 @@
     <string name="category_sim">SIM</string>
     <string name="force_esim_title">Force enable eSIM</string>
     <string name="force_esim_summary">For China models with a rewritable removable eSIM card inserted</string>
+    <string name="category_sound">Sound</string>
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="category_about">About</string>
+    <string name="author_homepage_title">Author homepage</string>
+    <string name="author_homepage_summary" translatable="false">www.jcao.dev</string>
 </resources>

@@ -11,4 +11,8 @@
     <string name="category_sim">SIM 卡</string>
     <string name="force_esim_title">强制开启 eSIM</string>
     <string name="force_esim_summary">中国版插入可读写外置ESIM芯片后可启用</string>
+    <string name="category_sound">声音</string>
+    <string name="dolby_title">杜比全景声</string>
+    <string name="category_about">关于</string>
+    <string name="author_homepage_title">作者主页</string>
 </resources>
