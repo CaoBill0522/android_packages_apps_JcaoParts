@@ -6,6 +6,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.jcao.parts">
 
+    <!-- Needed to start DitingEsim's switch activity -->
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+
     <application
         android:label="@string/jcao_title"
         android:icon="@drawable/ic_jcao"

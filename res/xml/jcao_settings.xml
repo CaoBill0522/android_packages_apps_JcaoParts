@@ -20,4 +20,12 @@
         </Preference>
 
     </PreferenceCategory>
+    <PreferenceCategory
+        android:key="sim_category"
+        android:title="@string/category_sim">
+        <SwitchPreferenceCompat
+            android:key="force_esim"
+            android:title="@string/force_esim_title"
+            android:summary="@string/force_esim_summary" />
+    </PreferenceCategory>
 </PreferenceScreen>
