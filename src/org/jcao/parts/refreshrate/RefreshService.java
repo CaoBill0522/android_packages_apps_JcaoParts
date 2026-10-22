@@ -61,7 +61,7 @@ public class RefreshService extends Service {
         @Override
         public void onReceive(Context context, Intent intent) {
             mPreviousApp = "";
-            mRefreshUtils.setDefaultRefreshRate(context);
+            mRefreshUtils.restoreDefaultRefreshRate();
         }
     };
 
@@ -69,7 +69,7 @@ public class RefreshService extends Service {
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         mRefreshUtils = new RefreshUtils(this);
-        mRefreshUtils.setDefaultRefreshRate(this);
+        mRefreshUtils.restoreDefaultRefreshRate();
         try {
             mActivityTaskManager = ActivityTaskManager.getService();
             mActivityTaskManager.registerTaskStackListener(mTaskListener);
@@ -89,7 +89,7 @@ public class RefreshService extends Service {
         } catch (RemoteException e) {
             // Do nothing
         }
-        mRefreshUtils.setDefaultRefreshRate(this);
+        mRefreshUtils.restoreDefaultRefreshRate();
         super.onDestroy();
     }
 
